@@ -22,7 +22,7 @@ Mô hình chỉ hỗ trợ sàng lọc, không thay thế chẩn đoán của b�
 ## 2. Dữ liệu
 
 - **Nguồn dữ liệu:** AREDS
-- **Số lượng:** 30.000-40.0000
+- **Số lượng:** 30.000-40.000 ảnh mỗi lớp
 - **Chia tập:** train / validation / test = TỈ LỆ
 - **Chống rò rỉ dữ liệu:** chia theo bệnh nhân, không chia theo ảnh, để hai mắt
   hoặc nhiều ảnh của cùng một người không nằm ở các tập khác nhau.
@@ -37,7 +37,7 @@ Mô hình chỉ hỗ trợ sàng lọc, không thay thế chẩn đoán của b�
 - **Tăng cường dữ liệu:** lật ngang, xoay nhẹ, thay đổi độ sáng và tương phản.
   Không dùng phép biến đổi làm mất dấu hiệu bệnh (drusen, tổn thương vùng
   hoàng điểm).
-- **Mô hình:** TÊN BACKBONE, VÍ DỤ EfficientNet-B0 / ResNet50 pretrained trên
+- **Mô hình:** ResNet50 pretrained trên
   ImageNet, fine-tune với đầu phân loại lớp.
 - **Huấn luyện:** hàm mất mát cross-entropy có trọng số lớp, bộ tối ưu
   Adam, learning rate GIÁ TRỊ, early stopping theo validation.
